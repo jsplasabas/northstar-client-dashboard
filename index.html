@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Weekly results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="wrap" id="app" aria-live="polite">
+
+  <section id="loading" aria-label="Loading">
+    <div class="skel t"></div><div style="height:16px"></div><div class="skel k"></div><div style="height:24px"></div><div class="skel c"></div>
+  </section>
+
+  <section id="problem" class="state" hidden>
+    <h1 id="problem-title">This link does not work</h1>
+    <p class="muted" id="problem-text">Check that you copied the whole link from your email. If it still fails, reply to that email and we will send a new one.</p>
+  </section>
+
+  <section id="empty" class="state" hidden>
+    <h1>No numbers yet</h1>
+    <p class="muted">Your account is connected, but no results have arrived. The first numbers appear after the next nightly update.</p>
+  </section>
+
+  <div id="report" hidden>
+    <header class="top">
+      <div>
+        <p class="sub" id="who"></p>
+        <h1 id="title">Weekly results</h1>
+      </div>
+      <div class="seg" role="group" aria-label="Date range">
+        <button type="button" data-range="this_week" aria-pressed="false">This week</button>
+        <button type="button" data-range="last_week" aria-pressed="true">Last week</button>
+        <button type="button" data-range="last_30" aria-pressed="false">Last 30 days</button>
+      </div>
+      <p class="sub" id="rangeline"></p>
+    </header>
+
+    <div class="kpis" id="kpis" style="margin-top:var(--s5)"></div>
+
+    <section class="note" id="note" style="margin-top:var(--s6)" aria-labelledby="note-h">
+      <h2 id="note-h">This week in plain words</h2>
+      <div id="note-body"></div>
+    </section>
+
+    <section class="sec" style="margin-top:var(--s6)" aria-labelledby="trend-h">
+      <h2 id="trend-h">The last 12 weeks</h2>
+      <p class="lede">Weekly totals, Monday to Sunday. Hover or tap the chart to read a week.</p>
+      <div class="panel">
+        <div class="legend" id="legend"></div>
+        <div class="chart" id="chart"></div>
+        <button type="button" class="linkbtn" id="tabletoggle" aria-expanded="false" aria-controls="tablewrap">Show as a table</button>
+        <div class="tablewrap" id="tablewrap" hidden></div>
+      </div>
+    </section>
+
+    <div class="two" style="margin-top:var(--s6)">
+      <section class="sec" aria-labelledby="funnel-h">
+        <h2 id="funnel-h">From lead to policy</h2>
+        <p class="lede" id="funnel-lede"></p>
+        <div class="panel"><ul class="bars" id="funnel"></ul></div>
+      </section>
+      <section class="sec" aria-labelledby="src-h">
+        <h2 id="src-h">Where leads came from</h2>
+        <p class="lede" id="src-lede"></p>
+        <div class="panel"><ul class="bars" id="sources"></ul></div>
+      </section>
+    </div>
+
+    <section class="sec" style="margin-top:var(--s6)" aria-labelledby="more-h">
+      <h2 id="more-h">Other numbers</h2>
+      <div class="panel"><div class="facts" id="facts"></div></div>
+    </section>
+
+    <details class="how" id="how" style="margin-top:var(--s6)">
+      <summary>How we calculate these numbers</summary>
+      <dl>
+        <div><dt>New leads</dt><dd>People who enquired in the period, counted once each. If the same email or phone number appears again, it is not counted twice.</dd></div>
+        <div><dt>Booked a call</dt><dd>Calls that were scheduled in the period, whenever the call itself takes place.</dd></div>
+        <div><dt>Show-up rate</dt><dd>Calls that took place in the period where the person attended, divided by calls where they attended or did not. Calls still to come, cancelled calls and calls with no outcome marked are left out. With fewer than 8 calls, treat the rate as a rough guide.</dd></div>
+        <div><dt>New policies and sales closed</dt><dd>Deals moved to Won in the period. Sales closed adds up the dollar value on those deals. If the deals carry no value, it shows “Not tracked” rather than $0.</dd></div>
+        <div><dt>Change</dt><dd>Compared with the period just before it, of the same length. For “This week”, the first days of this week are compared with the same days last week. Show-up rate changes are in percentage points.</dd></div>
+        <div><dt>Time to first reply</dt><dd>The middle value, in minutes, between a lead arriving and our first message to them.</dd></div>
+        <div><dt>Cost per lead and per booking</dt><dd>The weekly ad spend we were given, divided by leads or booked calls. Hidden when no ad spend has been entered.</dd></div>
+        <div><dt>Dates</dt><dd>Days are counted in UTC. A week runs Monday to Sunday. Numbers update every night.</dd></div>
+      </dl>
+    </details>
+
+    <p class="footer" id="footer" style="margin-top:var(--s5)"></p>
+  </div>
+</main>
+<script src="/app.js" defer></script>
+</body>
+</html>

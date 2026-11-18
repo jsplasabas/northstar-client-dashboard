@@ -1,0 +1,44 @@
+{
+ "maple": {
+  "week_start": "2026-11-09",
+  "created_at": "2026-11-16T13:00:00Z",
+  "subject": "Maple Auto Insurance: your week of Nov 9",
+  "headline": "More people booked a call this week, and your sales rose.",
+  "bullets": [
+   "53 new leads, up 2% from 52.",
+   "32 people booked a call, up 52% from 21.",
+   "20 of the 26 people with a call due showed up, 77%, down 3 points."
+  ],
+  "win": "Three new policies closed for $2,800, up from $1,200 the week before.",
+  "watch": "Show-up rate eased a little, so we are keeping an eye on it.",
+  "next_step": "We are sending a text reminder two hours before each call to keep show-ups steady."
+ },
+ "harbor": {
+  "week_start": "2026-11-09",
+  "created_at": "2026-11-16T13:00:00Z",
+  "subject": "Harbor Home Coverage: your week of Nov 9",
+  "headline": "Leads were steady, but fewer booked people are showing up than usual.",
+  "bullets": [
+   "50 new leads, down 4% from 52.",
+   "21 people booked a call, up 11% from 19.",
+   "13 of the 23 people with a call due showed up, 57%. The last four weeks averaged 74%."
+  ],
+  "win": "Four new policies closed, up from three the week before.",
+  "watch": "Show-ups have been low for two weeks in a row. Closed sales came to $2,500, down 54% from $5,450.",
+  "next_step": "We are reviewing the reminder messages and call times for the last two weeks to see why people are missing calls."
+ },
+ "summit": {
+  "week_start": "2026-11-09",
+  "created_at": "2026-11-16T13:00:00Z",
+  "subject": "Summit Life Advisors: your week of Nov 9",
+  "headline": "New leads fell sharply this week.",
+  "bullets": [
+   "11 new leads, down 68% from 34.",
+   "4 people booked a call, down 71% from 14.",
+   "5 of the 7 people with a call due showed up, 71%, up 13 points. This comes from a small number of calls, so it can swing a lot."
+  ],
+  "win": "One new policy closed. Revenue is not tracked for this account, so we cannot show a dollar figure.",
+  "watch": "Leads are the number to watch. A drop this size usually means a lead source or form stopped working, but we have not confirmed the cause.",
+  "next_step": "We are checking your ad campaigns and website form today to find where the leads stopped."
+ }
+}
